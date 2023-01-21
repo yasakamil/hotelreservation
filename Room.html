@@ -24,3 +24,45 @@
             </div>
         </div>
 </nav>
+    
+<div class="container">
+<div class="header">
+    <h1><img src="images/logohotel.png" width="220" height="131" style="margin-left: 15px; margin-top: 15px; margin-right: 10px"></h1>
+    <p><em>Your best choice to stay</em></p>
+  </div>
+</div>
+
+    <form name="form1" onsubmit="return booking();">
+        <fieldset>
+            <legend>Fill out this form</legend>
+            <label class="form-label" for="nama">Name</label>
+            <input class="form-input" type="text" id="nama" name="nama" placeholder="Enter Your Name" required />
+            <label class="form-label" for="tanggal">Date of Bookings</label>
+            <input class="form-input" type="date" id="tanggal" name="tanggal" onchange="cektanggal()" required />
+            <label class="form-label" for="roomtype">Select Room Type</label>
+            <div class="form-radio">
+                <input type="radio" id="roomtype" name="roomtype" value="Twin" onclick="hitung()" checked />
+                <label for="roomtype">Twin</label>
+                <input type="radio" id="roomtype" name="roomtype" value="Suite" onclick="hitung()"/>
+                <label for="roomtype">Suite</label>
+                <input type="radio" id="roomtype" name="roomtype" value="Executive" onclick="hitung()" />
+                <label for="roomtype">Executive</label>
+            </div>
+            <label class="form-label" for="harga">Price</label>
+            <input class="form-input" type="text" id="harga" name="harga" value="100000" disabled />
+            <label class="form-label" for="jumlah">Number of Nights</label>
+            <input class="form-input" type="number" min="0" id="jumlah" name="jumlah" placeholder="Enter Nights" onchange="hitung()" required />
+            <label class="form-label" for="total">Total Price</label>
+            <input class="form-input" type="text" id="total" name="total" disabled />  
+            <input class="form-button" id="submit" type="submit" />
+        </div>
+        </fieldset>
+    </form>
+    
+
+<script src="ScriptHotel.js"></script>
+
+
+
+
+                                    
